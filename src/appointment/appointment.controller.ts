@@ -11,7 +11,7 @@ export class AppointmentController {
     return this.service.getAppointments();
   }
   @Get('/:uid')
-  getAppointments(@Param('uid') uid: string): string {
+  getAppointments(@Param('uid') uid: string): Promise<any> {
     return this.service.getAppointment(uid);
   }
   @Post()

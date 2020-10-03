@@ -11,8 +11,8 @@ export class AppointmentService {
   getAppointments(): Promise<Appointment[]> {
     return this.apptModel.find().exec();
   }
-  getAppointment(id: string): string {
-    return 'Details of appointment of userid = ' + id;
+  getAppointment(id: string): Promise<any> {
+    return this.apptModel.find({ userId: id }).exec();
   }
 
   async createAppointment(appt: appointmentDto): Promise<any> {
