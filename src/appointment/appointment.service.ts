@@ -15,6 +15,9 @@ export class AppointmentService {
     return this.apptModel.find({ userId: id }).exec();
   }
 
+  deleteAppointment(id: string): Promise<any> {
+    return this.apptModel.deleteOne({ _id: id }).exec();
+  }
   async createAppointment(appt: appointmentDto): Promise<any> {
     const newAppt = new this.apptModel(appt);
     return newAppt.save();
