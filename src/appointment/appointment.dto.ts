@@ -1,6 +1,6 @@
 export class appointmentDto {
   userId: string;
-  dateTimeFrom: string;
-  dateTimeTo: string;
+  time: string;
+  date: Date;
   description: string;
 }

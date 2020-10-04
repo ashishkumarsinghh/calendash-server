@@ -5,9 +5,9 @@ export class Appointment extends Document {
   @Prop({ type: String, required: true })
   userId: string;
   @Prop({ type: String, required: true })
-  dateTimeFrom: string;
+  date: Date;
   @Prop({ type: String, required: true })
-  dateTimeTo: string;
+  time: string;
   @Prop({ type: String, required: true })
   description: string;
 }
