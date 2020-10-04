@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
-  app.enableCors({ origin: ['http://localhost:3001', '*'] });
+  app.enableCors({ origin: ['https://calendash.vercel.app/', '*'] });
   const options = new DocumentBuilder()
     .setTitle('Calendash')
     .setDescription('Calendash API Description')
